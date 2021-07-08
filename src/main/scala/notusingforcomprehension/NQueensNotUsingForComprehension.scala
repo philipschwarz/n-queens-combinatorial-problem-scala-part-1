@@ -21,7 +21,8 @@ def queens(n: Int): List[List[Int]] =
     else
       placeQueens(k - 1) flatMap { queens =>
         (1 to n) withFilter { queen =>
-          safe(queen, queens)  } map { queen =>
+          safe(queen, queens)
+        } map { queen =>
           queen :: queens
         }
       }
